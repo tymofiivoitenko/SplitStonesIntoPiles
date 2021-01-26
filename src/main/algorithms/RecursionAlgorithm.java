@@ -1,5 +1,8 @@
-package main.pileSplittingAlgorithms;
+package main.algorithms;
 
+/**
+ * @author tymofiivoitenko
+ */
 public class RecursionAlgorithm implements StonesIntoPilesAlgorithm {
 
     public int getMinimalDifference(int[] stones) {

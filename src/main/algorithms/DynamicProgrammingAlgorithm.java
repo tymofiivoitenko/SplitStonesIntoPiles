@@ -1,19 +1,18 @@
-package main.pileSplittingAlgorithms;
+package main.algorithms;
+
+import java.util.Arrays;
 
 /**
  * @author tymofiivoitenko
  */
-
 public class DynamicProgrammingAlgorithm implements StonesIntoPilesAlgorithm {
 
     public int getMinimalDifference(int stones[]) {
-        int sum = 0;
-        int n = stones.length;
+        // Calculate sum of all elements in array
+        int sum = Arrays.stream(stones).sum();
 
-        // Calculate sum of all elements
-        for (int i = 0; i < n; i++) {
-            sum += stones[i];
-        }
+        // Number of elements in array
+        int n = stones.length;
 
         // Create an array to store
         // results of subproblems
@@ -48,19 +47,19 @@ public class DynamicProgrammingAlgorithm implements StonesIntoPilesAlgorithm {
         }
 
         // Initialize difference of two sums.
-        int minimalDifference = Integer.MAX_VALUE;
+        int minDifference = Integer.MAX_VALUE;
 
         // Find the largest j such that dp[n][j]
         // is true where j loops from sum/2 t0 0
         for (int j = sum / 2; j >= 0; j--) {
             // Find the
             if (dp[n][j] == true) {
-                minimalDifference = sum - 2 * j;
+                minDifference = sum - 2 * j;
                 break;
             }
         }
 
-        return minimalDifference;
+        return minDifference;
     }
 }
 
