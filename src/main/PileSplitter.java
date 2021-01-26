@@ -17,9 +17,9 @@ public class PileSplitter {
         int numberOfElements = stones.length;
         int sumOfElements = Arrays.stream(stones).sum();
 
-        // Decide which algorithm to use, based on number of elements and sum of elements in array:
-        // Recursion algorithm Time Complexity = O(2^n)
-        // Dynamic Programming algorithm Time Complexity = O(n*sum)
+        // Decide which algorithm to use, in order to reach minimum time complexity:
+        // (1) Recursion algorithm Time Complexity = O(2^n)
+        // (2) Dynamic Programming algorithm Time Complexity = O(n*sum)
         if (Math.pow(2, numberOfElements) < numberOfElements * sumOfElements) {
             algorithm = new RecursionAlgorithm();
         } else {
