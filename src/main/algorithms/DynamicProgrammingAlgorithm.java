@@ -52,7 +52,7 @@ public class DynamicProgrammingAlgorithm implements StonesIntoPilesAlgorithm {
         // Find the largest j such that dp[n][j]
         // is true where j loops from sum/2 to 0
         for (int j = sum / 2; j >= 0; j--) {
-            // Loop element in last row, to find the min difference
+            // Loop elements in the last row, to find the min difference
             if (dp[n][j]) {
                 minDifference = sum - 2 * j;
                 break;
