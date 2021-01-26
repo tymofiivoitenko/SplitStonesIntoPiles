@@ -2,6 +2,9 @@ package test;
 
 import main.PileSplitter;
 import org.junit.Test;
+
+import java.util.Arrays;
+
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -16,8 +19,8 @@ public class PileSplitterTest {
 
         // Create array with 100 elements for testing purposes
         int[] intArray = new int[100];
-        for (int i = 0; i < 100; i++) {
-            intArray[i] = i;
+        for (int i = 1; i < 101; i++) {
+            intArray[i-1] = i;
         }
         assertEquals(0, PileSplitter.splitWithMinDifference(intArray));
     }
