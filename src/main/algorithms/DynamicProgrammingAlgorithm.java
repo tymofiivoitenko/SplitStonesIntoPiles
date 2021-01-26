@@ -19,7 +19,7 @@ public class DynamicProgrammingAlgorithm implements StonesIntoPilesAlgorithm {
         boolean dp[][] = new boolean[n + 1][sum + 1];
 
         // Initialize first column as true.
-        // 0 sum is possible with all elements.
+        // 0 sum is possible with all elements
         for (int i = 0; i <= n; i++) {
             dp[i][0] = true;
         }
@@ -46,7 +46,7 @@ public class DynamicProgrammingAlgorithm implements StonesIntoPilesAlgorithm {
             }
         }
 
-        // Initialize difference of two sums.
+        // Initialize difference of two sums
         int minDifference = Integer.MAX_VALUE;
 
         // Find the largest j such that dp[n][j]
