@@ -3,7 +3,7 @@ package main.algorithms;
 /**
  * @author tymofiivoitenko
  */
-public class RecursionAlgorithmSplit implements SplitStonesIntoPilesAlgorithm {
+public class RecursionAlgorithm implements SplitStonesIntoPilesAlgorithm {
 
     public int getMinimalDifference(int[] stones) {
         return minPartition(stones, stones.length - 1, 0, 0);

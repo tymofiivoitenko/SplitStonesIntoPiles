@@ -1,7 +1,7 @@
 package main;
 
-import main.algorithms.DynamicProgrammingAlgorithmSplit;
-import main.algorithms.RecursionAlgorithmSplit;
+import main.algorithms.DynamicProgrammingAlgorithm;
+import main.algorithms.RecursionAlgorithm;
 import main.algorithms.SplitStonesIntoPilesAlgorithm;
 import java.util.Arrays;
 
@@ -21,10 +21,9 @@ public class PileSplitter {
         // (1) Recursion algorithm Time Complexity = O(2^n)
         // (2) Dynamic Programming algorithm Time Complexity = O(n*sum)
         if (Math.pow(2, numberOfElements) < numberOfElements * sumOfElements) {
-            algorithm = new RecursionAlgorithmSplit();
-            algorithm = new DynamicProgrammingAlgorithmSplit();
+            algorithm = new RecursionAlgorithm();
         } else {
-            algorithm = new DynamicProgrammingAlgorithmSplit();
+            algorithm = new DynamicProgrammingAlgorithm();
         }
 
         return algorithm.getMinimalDifference(stones);
