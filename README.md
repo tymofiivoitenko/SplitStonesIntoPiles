@@ -1,4 +1,4 @@
-Specification: Given an array of stone weights, split them into 2 piles with minimal weight difference
+Task: Given an array of stone weights, split them into 2 piles with minimal weight difference
 
 ## Solution
 
