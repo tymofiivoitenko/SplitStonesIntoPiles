@@ -50,10 +50,10 @@ public class DynamicProgrammingAlgorithm implements StonesIntoPilesAlgorithm {
         int minDifference = Integer.MAX_VALUE;
 
         // Find the largest j such that dp[n][j]
-        // is true where j loops from sum/2 t0 0
+        // is true where j loops from sum/2 to 0
         for (int j = sum / 2; j >= 0; j--) {
-            // Find the
-            if (dp[n][j] == true) {
+            // Loop element in last row, to find the min difference
+            if (dp[n][j]) {
                 minDifference = sum - 2 * j;
                 break;
             }
@@ -62,4 +62,3 @@ public class DynamicProgrammingAlgorithm implements StonesIntoPilesAlgorithm {
         return minDifference;
     }
 }
-
