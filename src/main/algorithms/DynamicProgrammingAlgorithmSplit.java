@@ -5,9 +5,10 @@ import java.util.Arrays;
 /**
  * @author tymofiivoitenko
  */
-public class DynamicProgrammingAlgorithm implements StonesIntoPilesAlgorithm {
+public class DynamicProgrammingAlgorithmSplit implements SplitStonesIntoPilesAlgorithm {
 
     public int getMinimalDifference(int stones[]) {
+
         // Calculate sum of all elements in array
         int sum = Arrays.stream(stones).sum();
 

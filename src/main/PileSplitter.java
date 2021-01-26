@@ -1,8 +1,8 @@
 package main;
 
-import main.algorithms.DynamicProgrammingAlgorithm;
-import main.algorithms.RecursionAlgorithm;
-import main.algorithms.StonesIntoPilesAlgorithm;
+import main.algorithms.DynamicProgrammingAlgorithmSplit;
+import main.algorithms.RecursionAlgorithmSplit;
+import main.algorithms.SplitStonesIntoPilesAlgorithm;
 import java.util.Arrays;
 
 /**
@@ -13,7 +13,7 @@ public class PileSplitter {
     // Split set into two subsets such that the difference of sums of elements is min
     // Return minimum difference
     public static int splitWithMinDifference(int[] stones) {
-        StonesIntoPilesAlgorithm algorithm;
+        SplitStonesIntoPilesAlgorithm algorithm;
         int numberOfElements = stones.length;
         int sumOfElements = Arrays.stream(stones).sum();
 
@@ -21,9 +21,10 @@ public class PileSplitter {
         // (1) Recursion algorithm Time Complexity = O(2^n)
         // (2) Dynamic Programming algorithm Time Complexity = O(n*sum)
         if (Math.pow(2, numberOfElements) < numberOfElements * sumOfElements) {
-            algorithm = new RecursionAlgorithm();
+            algorithm = new RecursionAlgorithmSplit();
+            algorithm = new DynamicProgrammingAlgorithmSplit();
         } else {
-            algorithm = new DynamicProgrammingAlgorithm();
+            algorithm = new DynamicProgrammingAlgorithmSplit();
         }
 
         return algorithm.getMinimalDifference(stones);
